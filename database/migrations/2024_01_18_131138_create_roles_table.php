@@ -32,7 +32,7 @@ return new class extends Migration
             ],
             [
                 'name' => 'Players',
-                'identity' => 'salesman',
+                'identity' => 'players',
                 'created_at' => Carbon::now()
             ]
         ]);

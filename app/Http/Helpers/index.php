@@ -90,5 +90,5 @@ function currentUser()
 
 
 function fullAccess(){
-    return encryptor('decrypt', request()-> get('accessType'));
+	return encryptor('decrypt', request()->session()->get('accessType'));
 }

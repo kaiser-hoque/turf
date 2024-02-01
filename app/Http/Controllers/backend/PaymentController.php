@@ -4,6 +4,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use App\Models\Payment;
 use Illuminate\Http\Request;
+use Exception;
 
 class PaymentController extends Controller
 {
@@ -29,19 +30,20 @@ class PaymentController extends Controller
     public function store(Request $request)
     {
         try {
-            $data=new Payment();
-            $data->name=$request->name;
-            $data->status=$request->status;
-            if($data->save()){
-                $this->notice::success('Successfully saved');
-                return redirect()->route('payment.index');
-            } catch
-            (Execption($e)){
-                $this->notice::error('Something went wrong');
-            }
+            $payment= new Payment();
+            $payment-> method = $request->method;
 
-        }
+         if($payment->save())
+                    $this->notice::success('Successfully saved');
+                    return redirect()->route('payment.index');
+                }
+        catch(Exception $e){
+                // dd($e);
+                 $this->notice::error('Please try again');
+                return redirect()->back()->withInput();
+            }
     }
+
 
     /**
      * Display the specified resource.

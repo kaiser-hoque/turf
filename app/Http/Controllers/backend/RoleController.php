@@ -7,6 +7,7 @@ use App\Models\Role;
 use Illuminate\Http\Request;
 use App\Http\Requests\backend\role\AddNewRequest;
 use App\Http\Requests\backend\role\UpdateRequest;
+use Exception;
 
 class RoleController extends Controller
 {

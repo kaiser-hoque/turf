@@ -26,7 +26,7 @@
                                 @csrf
                                 <div class="row mb-3 mt-3">
                                     <div class="col-md-4">
-                                        <label for="status" class="col-form-label fs-5">Select Role</label>
+                                        <label for="status" class="col-form-label fs-5"> <b  ><span style="font-size: 15px" class="text-muted">Select Role</span></b> </label>
                                         <select class="form-control" name="roleId" id="roleId">
                                             <option value="">Select Role</option>
                                             @forelse($role as $r)
@@ -42,7 +42,7 @@
                                         @endif
                                     </div>
                                     <div class="col-md-4">
-                                        <label for="inputText" class="col-form-label fs-5">Name (en)</label>
+                                        <label for="inputText" class="col-form-label fs-5"><b  ><span style="font-size: 15px" class="text-muted">Name(English)</span></b></label>
                                         <input type="text" class="form-control" value="{{ old('userName_en') }}"
                                             name="userName_en">
                                         @if ($errors->has('userName_en'))
@@ -50,7 +50,7 @@
                                         @endif
                                     </div>
                                     <div class="col-sm-4">
-                                        <label for="inputText" class="col-form-label fs-5">Name (bn)</label>
+                                        <label for="inputText" class="col-form-label fs-5 "><b  ><span style="font-size: 15px" class="text-muted">Name(Bangla)</span></b></label>
                                         <input type="text" class="form-control" value="{{ old('userName_bn') }}"
                                             name="userName_bn">
                                         @if ($errors->has('userName_bn'))
@@ -58,7 +58,7 @@
                                         @endif
                                     </div>
                                     <div class="col-sm-4">
-                                        <label for="inputEmail" class="  col-form-label fs-5">Email</label>
+                                        <label for="inputEmail" class="  col-form-label fs-5"><b><span style="font-size: 15px" class="text-muted">Email </span></b></label>
                                         <input type="email" class="form-control" value="{{ old('EmailAddress') }}"
                                             name="EmailAddress">
                                         @if ($errors->has('EmailAddress'))
@@ -66,7 +66,7 @@
                                         @endif
                                     </div>
                                     <div class="col-sm-4">
-                                        <label for="inputPassword" class="  col-form-label fs-5">Contact Number (English)</label>
+                                        <label for="inputPassword" class="  col-form-label fs-5"><b  ><span style="font-size: 15px" class="text-muted">Contact Number(English)</span></b></label>
                                         <input type="number" class="form-control" value="{{ old('contactNumber_en') }}"
                                             name="contactNumber_en">
                                         @if ($errors->has('contactNumber_en'))
@@ -74,7 +74,7 @@
                                         @endif
                                     </div>
                                     <div class="col-sm-4">
-                                        <label for="inputPassword" class="  col-form-label fs-5">Contact Number (Bangla)</label>
+                                        <label for="inputPassword" class="  col-form-label fs-5"><b  ><span style="font-size: 15px" class="text-muted"> Contact Number(Bangla)</span></b></label>
                                         <input type="number" class="form-control" value="{{ old('contactNumber_bn') }}"
                                             name="contactNumber_bn">
                                         @if ($errors->has('contactNumber_bn'))
@@ -82,14 +82,14 @@
                                         @endif
                                     </div>
                                     <div class="col-sm-4">
-                                        <label for="inputPassword" class="  col-form-label fs-5">Password</label>
+                                        <label for="inputPassword" class="  col-form-label fs-5"><b  ><span style="font-size: 15px" class="text-muted"> Password</span></b></label>
                                         <input type="password" class="form-control" name="password">
                                         @if ($errors->has('password'))
                                             <span class="text-danger"> {{ $errors->first('password') }}</span>
                                         @endif
                                     </div>
                                     <div class="col-md-4">
-                                        <label for="status" class="col-form-label fs-5">Status</label>
+                                        <label for="status" class="col-form-label fs-5"><b  ><span style="font-size: 15px" class="text-muted"> Status</span></b></label>
                                         <select id="status" class="form-control" name="status">
                                             <option value="1" @if (old('status') == 1) selected @endif>Active
                                             </option>
@@ -102,7 +102,7 @@
                                         @endif
                                     </div>
                                     <div class="col-md-4">
-                                        <label for="fullAccess" class="col-form-label fs-5">Full Access</label>
+                                        <label for="fullAccess" class="col-form-label fs-5"> <b  ><span style="font-size: 15px" class="text-muted"> Full Access</span></b></label>
                                         <select id="fullAccess" class="form-control" name="fullAccess">
                                             <option value="0" @if (old('fullAccess') == 0) selected @endif>No
                                             </option>
@@ -114,12 +114,12 @@
                                         @endif
                                     </div>
                                     <div class="col-md-4">
-                                        <label for="image" class="  col-form-label fs-5">Image</label>
+                                        <label for="image" class="  col-form-label fs-5"> <b  ><span style="font-size: 15px" class="text-muted"> User Image</span></b></label>
                                         <input class="form-control" type="file" id="image" name="image">
                                     </div>
                                     <hr class="mt-2">
 
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-primary"><b>Submit</b></button>
 
                                 </div>
                         </div>
